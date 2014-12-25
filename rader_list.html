@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找工作--雷达</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+		<div id="map">
+			<img src="img/map.jpg" alt="" />
+			<div class="map_showtxt z-active">
+				<a href="job_acitle.html">
+					<div class="map_txt">
+						<p>公司名称:兆本网络</p>
+						<p>招聘岗位:前台接待</p>
+						<p>招聘人数:3人</p>
+						<p>是否认证:否</p>
+					</div>
+				</a>
+				<div class="map_icon map_icon_active"></div>
+			</div>
+			<div class="map_showtxt" style="top:350px;right:-100px;">
+				<a href="job_acitle.html">
+					<div class="map_txt">
+						<p>公司名称:兆本网络</p>
+						<p>招聘岗位:前台接待</p>
+						<p>招聘人数:3人</p>
+						<p>是否认证:否</p>
+					</div>
+				</a>
+				<div class="map_icon"></div>
+			</div>
+		</div>
+		<!--顶部-->
+		<div class="seach">
+			<div class="member">
+				<img src="img/icon_member.png" alt="" />
+			</div>
+			<div class="seach_context">
+				<input type="text" value="搜索" />
+				<i>
+
+
+
+				<img src="img/icon_mk.png" alt="" />
+
+
+
+			</i>
+			</div>
+		</div>
+		<!--end 顶部-->
+		<!--底部菜单-->
+		<ul class="footer">
+			<li><a href="javascript:;" id="rader">雷达</a>
+			</li>
+			<li>
+				<a href="job_list.html">结果</a>
+				<i>8</i>
+			</li>
+			<li><a href="member_index.html">我的</a>
+			</li>
+		</ul>
+		<!--end 底部菜单-->
+		<!--筛选和附近-->
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="javascript:;" id="screen">筛</a>
+				</li>
+				<li><a href="javascript:;" id="near">附</a>
+				</li>
+			</ul>
+		</div>
+		<!--end 筛选和附近-->
+		<!--弹出筛选菜单-->
+		<i class="nav_close d_n">X</i>
+		<div class="scree_nav d_n">
+			<div class="scree_nav_context">
+				<h2>筛选条件</h2>
+				<dl>
+					<dt>筛选半径：</dt>
+					<dd><a href="#">2KM</a>
+					</dd>
+					<dd><a href="#" class="active">5KM</a>
+					</dd>
+					<dd><a href="#">10KM</a>
+					</dd>
+				</dl>
+				<div class="job_Category">
+					<p>职位类别：</p>
+					<ul>
+						<li>技术类</li>
+						<li><a href="#">车间主任</a>
+						</li>
+						<li><a href="#">技术总监</a>
+						</li>
+						<li><a href="#" class="active">维修组长</a>
+						</li>
+						<li><a href="#">维修徒工</a>
+						</li>
+						<li><a href="#">维修技师</a>
+						</li>
+						<li><a href="#">钣金技师</a>
+						</li>
+						<li><a href="#">喷漆技师</a>
+						</li>
+					</ul>
+					<ul>
+						<li>非技术类</li>
+						<li><a href="#">前台接待</a>
+						</li>
+						<li><a href="#">服务顾问</a>
+						</li>
+						<li><a href="#">前台主管</a>
+						</li>
+						<li><a href="#">车间主管</a>
+						</li>
+						<li><a href="#">库房主管</a>
+						</li>
+						<li><a href="#">库管员</a>
+						</li>
+						<li><a href="#">财务行政客服</a>
+						</li>
+					</ul>
+					<div class="job_Category_btn">
+						<button>已经选择好了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end 弹出筛选菜单-->
+		<!--雷达-->
+		<div class="radar d_n">
+			<img src="img/radar.gif" alt="" />
+		</div>
+		<!--end 雷达-->
+	</body>
+	<!--jQuery-->
+	<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找工作--岗位详细页</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--jQuery-->
+		<script src="js/jquery.js"></script>
+	</head>
+
+	<body style="background: #f0f0f0;">
+		<div class="header_nav">
+			<a href="javascript:history.back(-1);">
+				<i></i>
+			</a>
+			找工作
+		</div>
+		<div class="job_main">
+			<table class="job_main_acitle" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>职位月薪:</td>
+					<td>4000-6000元/月</td>
+					<td>工作地点:</td>
+					<td>浙江-杭州</td>
+				</tr>
+				<tr>
+					<td>发布时间:</td>
+					<td>2014-10-19</td>
+					<td>工作性质:</td>
+					<td>全职</td>
+				</tr>
+				<tr>
+					<td>工作经验:</td>
+					<td>不限</td>
+					<td>最低学历:</td>
+					<td>大专</td>
+				</tr>
+				<tr>
+					<td>招聘人数:</td>
+					<td colspan="3">5人</td>
+				</tr>
+				<tr>
+					<td>职位类别:</td>
+					<td colspan="3">学徒</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="height:50px;"></td>
+				</tr>
+				<tr>
+					<td>职位描述:</td>
+					<td colspan="3">
+						1、工作认真细致、有责任心。2、敬业爱岗、能吃 苦耐劳。3、另招学徒工数名。
+					</td>
+				</tr>
+				<tr>
+					<td>招工地址:</td>
+					<td colspan="3">
+						浙江省杭州市拱墅区台州路88号商品商务楼2楼
+					</td>
+				</tr>
+				<tr>
+					<td>招工单位:</td>
+					<td colspan="3">
+						杭州新动员
+					</td>
+				</tr>
+				<tr>
+					<td>联系电话:</td>
+					<td>13562135621</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="padding:50px 0;text-align: center;"><a href="#" class="apply">申请岗位</a></td>
+					<td colspan="2" style="padding:50px 0;text-align: center;"><a href="#" class="souchang">收藏岗位</a></td>
+
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/index.js"></script>
+</html>

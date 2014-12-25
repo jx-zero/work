@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找工作--我发布的岗位</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body style="background: #f0f0f0;">
+		<div class="header_nav">
+			<a href="javascript:history.back(-1);">
+				<i></i>
+			</a>
+			我的
+		</div>
+		<div class="job_main member_job_main">
+			<ul class="member_job_nav ent_rest">
+				<li><a href="ent_rest.html" class="mem_active">我发布的职位</a></li>
+				<li><a href="ent_boxrest.html">简历收集箱</a></li>
+			</ul>
+			<table border="0" cellspacing="0" cellpadding="0" class="job_main_list ent_rest_list">
+				<thead>
+					<tr>
+						<th>职位标题</th>
+						<th>公司名称</th>
+						<th>发布时间</th>
+						<th>属性</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>汽车学徒</td>
+						<td>澵动员汽车有限公司</td>
+						<td>2014-10-19</td>
+						<td><a href="#">修改</a></td>
+					</tr>
+					<tr style="border:0;">
+						<td colspan='4' style="padding: 50px 0;">
+							<a href="ent_addrest.html" class="ent_btn">发布岗位</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

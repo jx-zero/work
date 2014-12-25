@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找工作--岗位收藏</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body style="background: #f0f0f0;">
+		<div class="header_nav">
+			<a href="javascript:history.back(-1);">
+				<i></i>
+			</a>
+			我的
+		</div>
+		<div class="job_main member_job_main">
+			<ul class="member_job_nav">
+				<li><a href="member_index.html" class="mem_active">我的收藏</a></li>
+				<li><a href="member_resume.html">我的简历</a></li>
+				<li><a href="member_bbs.html">我的论坛</a></li>
+			</ul>
+			<table class="job_main_list" style="margin-top: 10px;">
+				<tr>
+					<th>岗位</th>
+					<th>公司名称</th>
+					<th>发布时间</th>
+					<th>状态</th>
+				</tr>
+				<tr>
+					<td>汽车学徒</td>
+					<td>新动员汽车有限公司</td>
+					<td>2014-10-19</td>
+					<td><a href="#">投简历</a></td>
+				</tr>
+				<tr>
+					<td>汽车学徒</td>
+					<td>新动员汽车有限公司</td>
+					<td>2014-10-19</td>
+					<td class="job_mem_active">职位已招满</td>
+				</tr>
+			</table>
+			
+		</div>
+	</body>
+	<!--jQuery-->
+		<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+</html>
